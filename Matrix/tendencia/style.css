@@ -1,0 +1,197 @@
+/* PÁGINA DE TENDÊNCIAS */
+.trends-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(6, 6, 6, 0.3);
+}
+
+.trends-header h1 {
+  margin-bottom: 1rem;
+}
+
+.area-selector {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.trends-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #aaa;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #3f0d85;
+}
+
+.trends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 2rem;
+}
+
+.trend-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: transform 0.3s;
+  border-top: 4px solid transparent;
+}
+
+.trend-card:hover {
+  transform: translateY(-5px);
+}
+
+.trend-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.market-trends {
+  border-color: #3f0d85;
+}
+
+.future-trends {
+  border-color: #d4145a;
+}
+
+.salaries {
+  border-color: #4CAF50;
+}
+
+.skills-demand {
+  border-color: #FFC107;
+}
+
+.trend-content ul {
+  list-style: none;
+}
+
+.trend-content li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.trend-content li:before {
+  content: "•";
+  color: inherit;
+  font-weight: bold;
+}
+
+.market-trends li:before {
+  color: #3f0d85;
+}
+
+.future-trends li:before {
+  color: #d4145a;
+}
+
+.salaries li:before {
+  color: #4CAF50;
+}
+
+.skills-demand li:before {
+  color: #FFC107;
+}
+
+.salary-levels {
+  margin-top: 1rem;
+}
+
+.salary-level {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: rgba(19, 18, 12, 0.1);
+  border-radius: 20px;
+  margin: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .trends-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .trends-header {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* FUNDO ESCURO GERAL */
+body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* NAVBAR (mesmo estilo do "Estudos") */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main-nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d4145a;
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #d4145a;
+}

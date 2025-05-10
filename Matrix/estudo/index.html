@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plano de Estudos - Career Bridge</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="circle-animation" id="circle"></div>
+  
+  <nav class="main-nav">
+    <a href="index.html" class="logo">Career Bridge</a>
+    <div class="nav-links">
+      <a href="/estudo/">Meu Perfil</a>
+      <a href="/vagas/">Vagas</a>
+      <a href="/mercado/">Mercado</a>
+      <a href="/estudo/" class="active">Estudos</a>
+      <a href="/tendencia/">Tendências</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="study-header">
+      <h1>Seu Plano de Estudos Personalizado</h1>
+      <p class="subtitle">Baseado nas vagas que você está buscando e nas habilidades que precisa desenvolver</p>
+    </div>
+
+    <div class="study-progress">
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 35%"></div>
+      </div>
+      <span>35% completo</span>
+    </div>
+
+    <div class="study-roadmap">
+      <h2><i class="fas fa-map-marked-alt"></i> Roteiro de Aprendizado</h2>
+      <div class="roadmap-steps">
+        <div class="step active">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Fundamentos Essenciais</h3>
+            <p>Domine os conceitos básicos necessários para sua área</p>
+            <ul class="step-skills">
+              <li><i class="fas fa-check-circle"></i> Lógica de Programação</li>
+              <li><i class="fas fa-check-circle"></i> Git e Controle de Versão</li>
+              <li><i class="far fa-circle"></i> HTTP e APIs REST</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Tecnologias Principais</h3>
+            <p>Aprenda as linguagens e frameworks mais demandadas</p>
+            <ul class="step-skills">
+              <li><i class="far fa-circle"></i> JavaScript/TypeScript</li>
+              <li><i class="far fa-circle"></i> React ou Angular</li>
+              <li><i class="far fa-circle"></i> Node.js</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Habilidades Complementares</h3>
+            <p>Desenvolva competências que diferenciam seu perfil</p>
+            <ul class="step-skills">
+              <li><i class="far fa-circle"></i> Testes Automatizados</li>
+              <li><i class="far fa-circle"></i> Docker</li>
+              <li><i class="far fa-circle"></i> Conceitos de Cloud</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="study-resources">
+      <h2><i class="fas fa-book-open"></i> Recursos Recomendados</h2>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <div class="resource-type curso"><i class="fas fa-graduation-cap"></i> Curso</div>
+          <h3>JavaScript Moderno do Básico ao Avançado</h3>
+          <div class="resource-meta">
+            <span><i class="far fa-clock"></i> 36 horas</span>
+            <span><i class="fas fa-signal"></i> Iniciante/Intermediário</span>
+          </div>
+          <p>Domine JavaScript com projetos práticos e conceitos essenciais para o mercado.</p>
+          <a href="#" class="btn-resource">Acessar Curso</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-type livro"><i class="fas fa-book"></i> Livro</div>
+          <h3>Clean Code: A Handbook of Agile Software Craftsmanship</h3>
+          <div class="resource-meta">
+            <span><i class="fas fa-pager"></i> 464 páginas</span>
+            <span><i class="fas fa-signal"></i> Intermediário/Avançado</span>
+          </div>
+          <p>Aprenda a escrever código limpo, legível e de fácil manutenção.</p>
+          <a href="#" class="btn-resource">Ver Livro</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-type projeto"><i class="fas fa-laptop-code"></i> Projeto</div>
+          <h3>Construa um E-commerce Completo</h3>
+          <div class="resource-meta">
+            <span><i class="fas fa-tasks"></i> 5 projetos</span>
+            <span><i class="fas fa-signal"></i> Prático</span>
+          </div>
+          <p>Desenvolva um sistema completo com carrinho, pagamentos e dashboard.</p>
+          <a href="#" class="btn-resource">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="study-skills">
+      <h2><i class="fas fa-bullseye"></i> Habilidades para Desenvolver</h2>
+      <div class="skills-need">
+        <div class="skill-priority high">
+          <h3><i class="fas fa-exclamation-circle"></i> Alta Prioridade</h3>
+          <ul>
+            <li>React Hooks</li>
+            <li>Redux</li>
+            <li>TypeScript</li>
+          </ul>
+        </div>
+        <div class="skill-priority medium">
+          <h3><i class="fas fa-info-circle"></i> Média Prioridade</h3>
+          <ul>
+            <li>Jest</li>
+            <li>GraphQL</li>
+            <li>Webpack</li>
+          </ul>
+        </div>
+        <div class="skill-priority low">
+          <h3><i class="fas fa-check-circle"></i> Baixa Prioridade</h3>
+          <ul>
+            <li>Serverless</li>
+            <li>WebAssembly</li>
+            <li>Blockchain</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

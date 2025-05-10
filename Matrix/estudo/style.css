@@ -1,0 +1,334 @@
+/* ESTILOS GERAIS */
+.study-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+}
+
+.study-progress {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.progress-container {
+  flex-grow: 1;
+  height: 12px;
+  background: #1a1a1a;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3f0d85, #d4145a);
+  border-radius: 6px;
+  transition: width 0.8s ease;
+}
+
+.study-progress span {
+  font-weight: bold;
+  color: #d4145a;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* ROADMAP */
+.study-roadmap {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.roadmap-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.step:hover {
+  background: rgba(63, 13, 133, 0.1);
+}
+
+.step.active {
+  opacity: 1;
+  background: rgba(63, 13, 133, 0.2);
+  border-left: 4px solid #d4145a;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.step.active .step-number {
+  background: linear-gradient(135deg, #3f0d85, #d4145a);
+  color: white;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.step-skills {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.step-skills li {
+  background: rgba(63, 13, 133, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.step-skills .fa-check-circle {
+  color: #4CAF50;
+}
+
+/* RECURSOS */
+.study-resources {
+  margin-bottom: 2rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.resource-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  border: 1px solid #1a1a1a;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  border-color: #3f0d85;
+}
+
+.resource-type {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.resource-type.curso {
+  background: rgba(63, 13, 133, 0.3);
+  color: #b388ff;
+}
+
+.resource-type.livro {
+  background: rgba(33, 150, 243, 0.3);
+  color: #64b5f6;
+}
+
+.resource-type.projeto {
+  background: rgba(76, 175, 80, 0.3);
+  color: #81c784;
+}
+
+.resource-meta {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.btn-resource {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: rgba(63, 13, 133, 0.5);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-resource:hover {
+  background: rgba(63, 13, 133, 0.8);
+}
+
+/* HABILIDADES */
+.skills-need {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-priority {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.skill-priority h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-priority.high {
+  border-top: 4px solid #F44336;
+}
+
+.skill-priority.medium {
+  border-top: 4px solid #FFC107;
+}
+
+.skill-priority.low {
+  border-top: 4px solid #4CAF50;
+}
+
+.skill-priority ul {
+  list-style: none;
+}
+
+.skill-priority li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.skill-priority li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.skill-priority.high li:before {
+  background: #F44336;
+}
+
+.skill-priority.medium li:before {
+  background: #FFC107;
+}
+
+.skill-priority.low li:before {
+  background: #4CAF50;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-need {
+    grid-template-columns: 1fr;
+  }
+  
+  .step {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .step-number {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* RESET E BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main-nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d4145a;
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #d4145a;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* (cole aqui todo o restante do CSS que você já tem: .study-header, .study-progress, .study-roadmap, etc.) */

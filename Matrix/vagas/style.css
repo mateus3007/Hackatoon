@@ -1,0 +1,329 @@
+/* Estilos base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  background: linear-gradient(to right, #000000, #1c1c1c);
+  overflow: auto;
+  color: white;
+}
+
+/* Navegação */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #000000cc;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, #3f0d85, #d4145a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #d4145a;
+}
+
+
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Formulário de perfil */
+.profile-form {
+  background: #000000cc;
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #d4145a;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background: #1a1a1a;
+  color: white;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+  border-radius: 15px;
+}
+
+.skills-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.skills-input input {
+  margin-bottom: 0;
+}
+
+.skills-input button {
+  background: #3f0d85;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  margin: 3px;
+  transition: all 0.3s ease;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.skill-compatible {
+  background-color: #28a745;
+  color: white;
+}
+
+.skill-incompatible {
+  background-color: #dc3545;
+  color: white;
+}
+
+.job-compatibility-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.high-compatibility {
+  background-color: #28a745;
+  color: white;
+}
+
+.medium-compatibility {
+  background-color: #ffc107;
+  color: black;
+}
+
+.low-compatibility {
+  background-color: #dc3545;
+  color: white;
+}
+
+.skill-tag i {
+  font-size: 0.8rem;
+}
+
+.skill-tag i.fa-check {
+  color: #28a745;
+}
+
+.skill-tag i.fa-times {
+  color: #dc3545;
+}
+
+/* Lista de vagas */
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filters select {
+  flex: 1;
+  max-width: 200px;
+}
+
+.jobs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.job-card {
+  background: #000000cc;
+  padding: 25px;
+  border-radius: 15px;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-card h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.company {
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.description {
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.skills span {
+  background: #1a1a1a;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.btn-apply {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #3f0d85, #d4145a);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: opacity 0.3s;
+}
+
+.btn-apply:hover {
+  opacity: 0.9;
+}
+
+/* Botões */
+.btn-primary {
+  padding: 12px 25px;
+  background: linear-gradient(to right, #3f0d85, #d4145a);
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Animação do círculo */
+.circle-animation {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.circle-animation::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 8s linear infinite;
+  opacity: 0.3;
+}
+
+.circle-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed white;
+  border-radius: 50%;
+  animation: spinReverse 12s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}

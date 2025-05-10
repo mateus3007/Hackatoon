@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tendências - Career Bridge</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="circle-animation" id="circle"></div>
+  
+  <nav class="main-nav">
+    <a href="index.html" class="logo">Career Bridge</a>
+    <div class="nav-links">
+      <a href="/perfil/">Meu Perfil</a>
+      <a href="/vagas/">Vagas</a>
+      <a href="/mercado/">Mercado</a>
+      <a href="/estudo/">Estudos</a>
+      <a href="/tendencia/" class="active">Tendências</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="trends-header">
+      <h1>Tendências para <span id="careerArea">Sua Área</span></h1>
+      <div class="area-selector">
+        <select id="areaSelect" class="trends-select">
+          <option value="">Selecione sua área</option>
+          <option value="data-science">Ciência de Dados</option>
+          <option value="web-dev">Desenvolvimento Web</option>
+          <option value="mobile">Desenvolvimento Mobile</option>
+          <option value="devops">DevOps/Cloud</option>
+          <option value="ux-ui">Design UI/UX</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="trends-container" id="trendsContent">
+      <div class="empty-state">
+        <i class="fas fa-chart-line"></i>
+        <p>Selecione uma área para visualizar as tendências</p>
+      </div>
+    </div>
+  </div>
+
+  <template id="trendsTemplate">
+    <div class="trends-grid">
+      <div class="trend-card market-trends">
+        <h2><i class="fas fa-chart-bar"></i> Mercado Atual</h2>
+        <div class="trend-content" id="marketTrends"></div>
+      </div>
+      
+      <div class="trend-card future-trends">
+        <h2><i class="fas fa-rocket"></i> Tendências Futuras</h2>
+        <div class="trend-content" id="futureTrends"></div>
+      </div>
+      
+      <div class="trend-card salaries">
+        <h2><i class="fas fa-money-bill-wave"></i> Remuneração</h2>
+        <div class="trend-content" id="salaryTrends"></div>
+      </div>
+      
+      <div class="trend-card skills-demand">
+        <h2><i class="fas fa-lightbulb"></i> Habilidades Emergentes</h2>
+        <div class="trend-content" id="skillsTrends"></div>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

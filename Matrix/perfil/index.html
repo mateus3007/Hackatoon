@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Perfil - Career Bridge</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="circle-animation" id="circle"></div>
+  
+  <nav class="main-nav">
+    <a href="index.html" class="logo">Career Bridge</a>
+    <div class="nav-links">
+      <a href="perfil.html" class="active">Meu Perfil</a>
+      <a href="/vagas/">Vagas</a>
+      <a href="/mercado/">Mercado</a>
+      <a href="/estudo/">Estudos</a>
+      <a href="/tendencia/">Tendências</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Formulário de Cadastro -->
+    <div id="formContainer">
+      <h1>Complete seu perfil</h1>
+      <p class="subtitle">Quanto mais completo, melhores serão nossas recomendações</p>
+      
+      <form id="profileForm" class="profile-form">
+        <div class="profile-picture-section">
+          <div class="profile-picture-container">
+            <div class="profile-picture-placeholder">
+              <i class="fas fa-user"></i>
+            </div>
+            <input type="file" id="profilePicture" accept="image/*" style="display: none;">
+            <button type="button" id="changePicture" class="btn-change-picture">
+              <i class="fas fa-camera"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Informações Pessoais</h2>
+          <input type="text" id="fullName" placeholder="Nome completo" required>
+          <input type="email" id="email" placeholder="E-mail" required>
+          <input type="tel" id="phone" placeholder="Telefone">
+          <select id="area" required>
+            <option value="">Selecione sua área de interesse</option>
+            <option>Desenvolvimento Web</option>
+            <option>Design UI/UX</option>
+            <option>Ciência de Dados</option>
+            <option>Marketing Digital</option>
+          </select>
+        </div>
+        
+        <div class="form-section">
+          <h2>Habilidades</h2>
+          <div class="skills-input">
+            <input type="text" id="skillInput" placeholder="Adicione suas habilidades">
+            <button type="button" id="addSkill">+</button>
+          </div>
+          <div id="skillsContainer" class="skills-container"></div>
+        </div>
+        
+        <div class="form-section">
+          <h2>Experiência</h2>
+          <textarea id="experience" placeholder="Fale um pouco sobre sua experiência (mesmo que seja apenas estudos)"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary">Salvar Perfil</button>
+      </form>
+    </div>
+
+    <!-- Visualização do Perfil -->
+    <div id="profileView" class="profile-view" style="display: none;">
+      <div class="profile-header">
+        <h1>Meu Perfil</h1>
+        <button id="editProfile" class="btn-edit">Editar Perfil</button>
+      </div>
+      
+      <div class="profile-content">
+        <div class="profile-picture-section">
+          <div class="profile-picture-container">
+            <div id="profilePictureView" class="profile-picture">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-section">
+          <h2>Informações Pessoais</h2>
+          <p><strong>Nome:</strong> <span id="viewFullName"></span></p>
+          <p><strong>E-mail:</strong> <span id="viewEmail"></span></p>
+          <p><strong>Telefone:</strong> <span id="viewPhone"></span></p>
+          <p><strong>Área de Interesse:</strong> <span id="viewArea"></span></p>
+        </div>
+        
+        <div class="profile-section">
+          <h2>Habilidades</h2>
+          <div id="viewSkills" class="skills-view"></div>
+        </div>
+        
+        <div class="profile-section">
+          <h2>Experiência</h2>
+          <p id="viewExperience" class="experience-text"></p>
+        </div>
+        
+        <div class="profile-actions">
+          <a href="/vagas/" class="btn-primary">Ver Vagas Compatíveis</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

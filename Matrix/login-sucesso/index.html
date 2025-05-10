@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="circle-animation" id="circle"></div>
+
+  <div class="login-box">
+    <div class="success-message">Cadastro realizado com sucesso!</div>
+    <h2>Formulário de Login</h2>
+    <form>
+      <input type="text" placeholder="Usuário" required />
+      <input type="password" placeholder="Senha" required />
+      <button type="button" onclick="location.href='/perfil/'">Entrar</button>
+      <div class="links">
+        <a href="#">Esqueci a senha</a>
+      </div>
+    </form>
+    <div class="signup">
+      <a href="../cadastro/">Cadastrar</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

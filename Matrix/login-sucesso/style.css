@@ -1,0 +1,123 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  background: linear-gradient(to right, #000000, #1c1c1c);
+  overflow: hidden;
+  color: white;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000000cc;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 2;
+  width: 300px;
+}
+
+.success-message {
+  color: #4BB543;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background: #1a1a1a;
+  color: white;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #3f0d85, #d4145a);
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-box .links {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.login-box .links a {
+  font-size: 12px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.login-box .signup {
+  margin-top: 15px;
+}
+
+.login-box .signup a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.circle-animation {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.circle-animation::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 8s linear infinite;
+  opacity: 0.3;
+}
+
+.circle-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed white;
+  border-radius: 50%;
+  animation: spinReverse 12s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}

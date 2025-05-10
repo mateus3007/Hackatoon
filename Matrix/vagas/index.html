@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vagas - Career Bridge</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  
+  <div class="circle-animation" id="circle"></div>
+  
+  <nav class="main-nav">
+    <a href="index.html" class="logo">Career Bridge</a>
+    <div class="nav-links">
+      <a href="/perfil/">Meu Perfil</a>
+      <a href="vagas.html" class="active">Vagas</a>
+      <a href="/mercado/">Mercado</a>
+      <a href="/estudo/">Estudos</a>
+      <a href="/tendencia/">Tendências</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Vagas compatíveis com seu perfil</h1>
+    <p class="subtitle">Ordenadas por melhor compatibilidade com suas habilidades</p>
+    
+    <div class="filters">
+      <select>
+        <option>Filtrar por área</option>
+        <option>Front-end</option>
+        <option>Back-end</option>
+        <option>Full-stack</option>
+        <option>Design</option>
+        <option>DevOps</option>
+      </select>
+      <select>
+        <option>Filtrar por nível</option>
+        <option>Júnior</option>
+        <option>Pleno</option>
+        <option>Sênior</option>
+      </select>
+    </div>
+    
+    <div class="jobs-list">
+      <!-- Jobs will be dynamically inserted here by JavaScript -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

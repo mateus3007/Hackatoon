@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Análise de Mercado - Career Bridge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="circle-animation" id="circle"></div>
+  
+  <nav class="main-nav">
+    <a href="index.html" class="logo">Career Bridge</a>
+    <div class="nav-links">
+      <a href="/perfil/">Meu Perfil</a>
+      <a href="/vagas/">Vagas</a>
+      <a href="/mercado/" class="active">Mercado</a>
+      <a href="/estudo/">Estudos</a>
+      <a href="/tendencia/">Tendências</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Análise do Mercado</h1>
+    <p class="subtitle">Principais demandas e habilidades requisitadas</p>
+    
+    <div class="dashboard-grid">
+      <!-- Card de Linguagens mais Demandadas -->
+      <div class="dashboard-card">
+        <h2>Linguagens mais Demandadas</h2>
+        <div class="chart-container">
+          <canvas id="languagesChart"></canvas>
+        </div>
+        <div class="trend-info">
+          <p><span class="trend-up">↑ 12%</span> JavaScript continua liderando</p>
+          <p><span class="trend-up">↑ 8%</span> Python em alta para dados</p>
+        </div>
+      </div>
+      
+      <!-- Card de Habilidades Técnicas -->
+      <div class="dashboard-card">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills-demand">
+          <div class="skill-item">
+            <span class="skill-name">React</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 85%"></div>
+            </div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Node.js</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 72%"></div>
+            </div>
+            <span class="skill-percent">72%</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">SQL</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 68%"></div>
+            </div>
+            <span class="skill-percent">68%</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Git</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card de Média Salarial -->
+      <div class="dashboard-card">
+        <h2>Média Salarial por Nível</h2>
+        <div class="salary-chart">
+          <div class="salary-level">
+            <h3>Júnior</h3>
+            <p>R$ 3.500 - R$ 5.800</p>
+          </div>
+          <div class="salary-level">
+            <h3>Pleno</h3>
+            <p>R$ 6.000 - R$ 9.500</p>
+          </div>
+          <div class="salary-level">
+            <h3>Sênior</h3>
+            <p>R$ 10.000+</p>
+          </div>
+        </div>
+        <div class="disclaimer">
+          *Valores aproximados para desenvolvimento web
+        </div>
+      </div>
+      
+      <!-- Card de Soft Skills -->
+      <div class="dashboard-card">
+        <h2>Soft Skills Valorizadas</h2>
+        <ul class="soft-skills-list">
+          <li>Trabalho em equipe</li>
+          <li>Comunicação clara</li>
+          <li>Resolução de problemas</li>
+          <li>Adaptabilidade</li>
+          <li>Pensamento crítico</li>
+        </ul>
+        <div class="insight">
+          <p>78% das empresas priorizam soft skills na contratação</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adicionando Chart.js para gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

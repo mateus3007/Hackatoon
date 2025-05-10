@@ -1,0 +1,496 @@
+/* Reset e Estilos Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #000000, #1c1c1c);
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container Principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Navegação */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, #3f0d85, #d4145a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: #d4145a;
+  text-decoration: underline;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #d4145a;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Formulários */
+.profile-form {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(63, 13, 133, 0.5);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Upload de Foto */
+.photo-upload {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.photo-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  border: 2px dashed #3f0d85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-preview span {
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+/* Habilidades */
+.skills-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.skills-input input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.skills-input button {
+  background: #3f0d85;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 45px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+.skills-input button:hover {
+  background: #4e15a3;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background: #3f0d85;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.skill-tag span {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+/* Visualização do Perfil */
+.profile-view {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 20px;
+  display: none;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.profile-content {
+  display: grid;
+  gap: 25px;
+}
+
+.profile-section {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-section p {
+  margin: 10px 0;
+}
+
+.skills-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-view span {
+  background: #3f0d85;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.experience-text {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.profile-photo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3f0d85;
+}
+
+/* Dashboard de Mercado */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.dashboard-card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 25px;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.chart-container {
+  position: relative;
+  height: 200px;
+  margin: 20px 0;
+}
+
+.trend-info {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.trend-up {
+  color: #4CAF50;
+}
+
+.trend-down {
+  color: #F44336;
+}
+
+.skills-demand {
+  margin-top: 20px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  width: 80px;
+  font-size: 0.9rem;
+}
+
+.skill-bar {
+  flex: 1;
+  height: 10px;
+  background: #1a1a1a;
+  border-radius: 5px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background: linear-gradient(to right, #3f0d85, #d4145a);
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+
+.skill-percent {
+  width: 40px;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.salary-chart {
+  margin: 20px 0;
+}
+
+.salary-level {
+  margin-bottom: 15px;
+}
+
+.salary-level p {
+  margin: 5px 0;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+.soft-skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.soft-skills-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+.soft-skills-list li:last-child {
+  border-bottom: none;
+}
+
+.insight {
+  background: rgba(63, 13, 133, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Botões */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(to right, #3f0d85, #d4145a);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn-edit {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #3f0d85;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-edit:hover {
+  background: rgba(63, 13, 133, 0.2);
+}
+
+.profile-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Animação do círculo */
+.circle-animation {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.circle-animation::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 8s linear infinite;
+  opacity: 0.3;
+}
+
+.circle-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed white;
+  border-radius: 50%;
+  animation: spinReverse 12s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .nav-links {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-form, .profile-view, .dashboard-card {
+    padding: 20px;
+  }
+}
